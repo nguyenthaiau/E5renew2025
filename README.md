@@ -17,9 +17,11 @@ MSO_E5_Dev_AutoRenew is a Python application based on Git Actions that uses Micr
 
 1. Fork the MSO_E5_Dev_AutoRenew repository to your GitHub account.
 2. Register a new application in Azure Active Directory.
+https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/RegisteredApps
     - Select any organization directory, select "Web" for the redirect URL, and enter "**[http://localhost:53682/](http://localhost:53682/)**" for the redirect URL.
     - Save the Application ID and Secret.
-3. Set application permissions.
+3. Set application permissions. 
+>> Click on app then click API permissions
     - Select the following permissions: **`files.read.all`**, **`files.readwrite.all`**, **`sites.read.all`**, **`sites.readwrite.all`**, **`user.read.all`**, **`user.readwrite.all`**, **`directory.read.all`**, **`directory.readwrite.all`**, **`mail.read`**, **`mail.readwrite`**, **`mailboxsetting.read`**, and **`mailboxsetting.readwrite`**.
     - Grant permission for all 13 selected permissions.
 4. install rclone in your system. It is required to get refresh token (one time only)
